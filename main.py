@@ -18,7 +18,9 @@ app.register_blueprint(algorithm_bp, url_prefix='/algorithm')
 @app.route('/')
 def index():
     return render_template("index.html")
-
+@app.route('/fibonacci')
+def index():
+    return render_template("fibonacci.html")
 
 @app.errorhandler(404)
 def page_not_found(e):
